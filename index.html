@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Air Pollution Monitoring System</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="nav-icon.png" alt="" width="100" height="30"></a>
+
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#components">Components</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#circuit">Circuit</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#working">Working</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#code">Code</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <section class="header-sec">
+        
+        <h1 class="header-title">Air Pollution Monitoring System</h1><br>
+        <h5 class="header-discription"> 
+        </h5>
+      </section>
+
+      <section id="components" class="colored-section centered-section">
+         <h2 class="component-header">Components Used</h2>
+        <div id="carouselExampleControls" class="carousel slide " data-bs-ride="false" >
+            <div class="carousel-inner">
+              <div class="carousel-item active ">
+                <div class="row">
+                <div class="in-one-carousel col-md-4">
+                <img class="opinion-img" src="nodemcu.png" alt="" width="100" height="100">
+                <h5>NodeMCU ESP8266</h5>
+               </div>
+               <div class="in-one-carousel col-md-4">
+                <img class="opinion-img" src="MQ2-Gas-Sensor.jpg" alt="" width="100" height="100">
+                <h5>MQ-2 Gas Sensor </h5>
+               </div>
+               <div class="in-one-carousel col-md-4">
+                <img class="opinion-img" src="MQ-7GasSensor.jpg" alt="" width="100" height="100">
+                <h5>MQ-7 Gas Sensor</h5>
+               </div>
+               <div class="in-one-carousel col-md-4">
+                <img class="opinion-img" src="MQ-135GasSensor.jpg" alt="" width="100" height="100">
+                <h5>MQ-135 Gas Sensor</h5>
+               </div>
+               </div>
+              </div>
+              
+           
+    </section>
+<div class="explaination-box">
+    <section class="circuit-diagram" id="circuit">
+      <h3>Introduction of the Project</h3>
+      <p> <br>
+        <br>
+        This project presents a simple yet effective solution for monitoring air quality usingInternet of Things (IoT) technology. The system integrates a low-cost air quality sensor with IoT devices to provide real-time data on air pollutants.
+         The sensor measures key air quality parameters such as particulate matter, carbon monoxide (CO) etc.<br>
+         <br>
+
+          The collected data is transmitted wirelessly to a cloud-based platform for analysis and visualization.
+
+<br><br>
+The hardware setup consists of a compact and affordable air quality sensor (MQ- 135, MQ-7, MQ-2) connected to an ESP32, equipped with Wi-Fi. 
+The IoT-enabled sensor continuously collects air quality data and sends it to the cloud server. Users can access this information through a user-friendly interface, enabling them to monitor air quality trends, set threshold alerts, and make informed decisions to improve their surroundings.
+<br>
+<br>
+
+This project addresses the growing concern of air pollution by providing a cost- effective and accessible solution for individuals, communities, and local authorities to monitor and manage air quality. 
+The simplicity of the system makes it suitable fordeployment in various settings, fostering environmental awareness and encouraging proactive measures to enhance air quality for healthier living environments.
+      </p><br>
+      <br>
+
+        <h3 style="margin-bottom: 2.5%;">Circuit of Air Pollution Monitoring system </h3><br>
+        <div class="row">
+            <div class="col-md-6" style="padding: 0;">
+                <img class="circuit"src="circuitdiagram.png.jpeg" alt="" width="90%"  >
+            </div>
+            <div class="col-md-6" style="padding: 0;">
+                <img src="connection.jpeg" alt="" class="connection" width="90%"  >
+            </div>
+
+        </div>
+        
+        <br><br>
+       <p class="Explaination">
+        
+        <ul>
+          <li> 
+            The air pollution monitoring system employs three gas sensors and an ESP32 microcontroller for comprehensive environmental analysis. These sensors detect key pollutants such as carbon monoxide, nitrogen dioxide, and particulate matter. Integrated with the ESP32, a powerful and energy-efficient microcontroller, the system gathers real-time data on air quality. The ESP32 facilitates wireless communication, enabling seamless data transmission to a central monitoring unit or cloud platform. With this setup, the system provides timely and accurate information, aiding in pollution control efforts. Its compact design, low power consumption, and IoT capabilities make it an effective solution for monitoring air quality in various settings, contributing to a healthier and more sustainable environment.
+          </li>
+        </ul>
+      </p>
+        
+        
+
+    </section>
+
+    <section class="blynk-setup">
+        <h3 style="margin-bottom: 2.5%;">Code</h3>
+        <div class="blynk-1">
+          
+          <img src="code1.png" width="90%">
+          <img src="code2.png" width="90%">
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <h4>Explanation</h4>
+          <p>
+            <br>
+            This Arduino code is designed for an Internet of Things (IoT) project using an ESP32 microcontroller, WiFi connectivity, and the Blynk platform. 
+            The code enables the monitoring of gas sensor data (MQ135, MQ7, MQ2) and sends the readings to the Blynk app for visualization.<br>
+
+          The program begins by including necessary libraries for WiFi and Blynk integration.<br>
+           Users need to replace placeholders with their WiFi credentials and Blynk authentication token. Analog pins are defined for three gas sensors (MQ135, MQ7, MQ2).<br>
+
+          <br>
+          In the setup function, the ESP32 connects to the specified WiFi network and initializes communication with the Blynk server using the provided credentials. 
+          The loop function continuously reads analog values from the gas sensors, sends this data to corresponding virtual pins on the Blynk app, and prints the values to the Serial Monitor.
+          <br><br>
+
+          Each gas sensor's value is sent to a unique virtual pin (V0 for MQ135, V1 for MQ7, V2 for MQ2). Additionally, the Serial Monitor displays the sensor readings. 
+          The Blynk.run() function allows the Blynk library to handle communication with the Blynk server.<br><br>
+      
+          
+          A delay of 5000 milliseconds (adjustable based on requirements) is incorporated to control the frequency of sensor readings.
+           Overall, this code facilitates the remote monitoring of gas sensor data through the Blynk app, providing a basis for creating an IoT-enabled environmental monitoring system.
+
+          </p>
+          <h4>Conclusion</h4>
+          <p>
+            The implementation of an air quality monitoring sensor using IoT technology offers asimple yet impactful solution to address the growing concerns about air pollution.<bvr>
+              <br>
+            
+
+This project underscores the potential of technology to enhance our understanding of environmental conditions and empower individuals and communities to make informed decisions about their well-being.<br>
+<br>
+The project's cost-effectiveness and ease of implementation make it a viable option for widespread adoption, particularly in regions where air quality management maybe lacking. 
+The data generated by these sensors can contribute to a broader network of information, aiding researchers, policymakers, and citizens incollaborative efforts to combat air pollution.<br>
+<br>
+By fostering a sense of environmental responsibility, this project not only serves as atool for individual users but also contributes to a collective effort towards sustainableand healthier living. 
+As we continue to face environmental challenges, such projects exemplify the potential of technology to be a driving force in creating positive change for our planet and the well-being of its inhabitants.
+          </p>
+          <p>
+           SUBMITTED  BY:
+           <BR>
+            <BR>
+            Neha Shetty <br>
+            USN: 4NM21IS094
+            <br>
+            Neil Mascarenhas<br>
+            USN: 4NM21IS095
+            <br>
+            P Alekhya<br>
+            USN: 4NM2IIS100
+            <BR>
+              <BR>
+              </BR>
+              Under the Guidance of :
+              Dr. Jason Elroy Martis
+
+              <br>
+              Associate Professor of Information Science and Engineering
+</footer>
+</body>
+</html>
